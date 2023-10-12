@@ -40,10 +40,6 @@ const createProduct = async (req, res, next) => {
       },
     });
   } catch (err) {
-    // res.status(400).json({
-    //   status: 'Failed',
-    //   message: err.message,
-    // });
     next(new ApiError(err.message, 400));
   }
 };
